@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/nexuscore-presentation/static/css/main.03877db8.css",
-    "main.js": "/nexuscore-presentation/static/js/main.fd07304f.js",
+    "main.css": "/nexuscore-presentation/static/css/main.8e62f139.css",
+    "main.js": "/nexuscore-presentation/static/js/main.f776a0fe.js",
     "static/js/453.a13f0042.chunk.js": "/nexuscore-presentation/static/js/453.a13f0042.chunk.js",
     "index.html": "/nexuscore-presentation/index.html",
-    "main.03877db8.css.map": "/nexuscore-presentation/static/css/main.03877db8.css.map",
-    "main.fd07304f.js.map": "/nexuscore-presentation/static/js/main.fd07304f.js.map",
+    "main.8e62f139.css.map": "/nexuscore-presentation/static/css/main.8e62f139.css.map",
+    "main.f776a0fe.js.map": "/nexuscore-presentation/static/js/main.f776a0fe.js.map",
     "453.a13f0042.chunk.js.map": "/nexuscore-presentation/static/js/453.a13f0042.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03877db8.css",
-    "static/js/main.fd07304f.js"
+    "static/css/main.8e62f139.css",
+    "static/js/main.f776a0fe.js"
   ]
 }
