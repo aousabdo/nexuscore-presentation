@@ -6,7 +6,9 @@ import { CuttingEdgeCapabilities } from './slides/CuttingEdgeCapabilities';
 import { RobustArchitecture } from './slides/RobustArchitecture';
 import { MeasurableImpact } from './slides/MeasurableImpact';
 import { IroncladSecurity } from './slides/IroncladSecurity';
-import { HashRouter as Router } from 'react-router-dom';
+
+// Remove this line:
+// import { HashRouter as Router } from 'react-router-dom';
 
 const slides = [
   IntroducingNexusCore,
@@ -50,24 +52,24 @@ const Presentation = () => {
     <div className={slideStyles.wrapper}>
       <div className={slideStyles.container}>
         <div className={slideStyles.header}>
-          {currentSlideData.icon}
-          <h1 className={slideStyles.title}>{currentSlideData.title}</h1>
+          <div className={slideStyles.titleWrapper}>
+            {React.cloneElement(currentSlideData.icon, { 
+              className: `${slideStyles.icon} ${currentSlideData.icon.props.className}`
+            })}
+            <h1 className={slideStyles.title}>{currentSlideData.title}</h1>
+          </div>
           <h2 className={slideStyles.subtitle}>{currentSlideData.subtitle}</h2>
         </div>
         <div className={slideStyles.contentWrapper}>
           <p className={slideStyles.content}>{currentSlideData.content}</p>
-          <ul className={slideStyles.bulletList}>
+          <div className={slideStyles.cardGrid}>
             {currentSlideData.bulletPoints.map((point, index) => (
-              <li key={index} className={slideStyles.bulletPoint}>
-                {point.icon ? (
-                  React.cloneElement(point.icon, { className: slideStyles.bulletIcon })
-                ) : (
-                  <span className={slideStyles.bulletDot}>•</span>
-                )}
-                {point.text || point}
-              </li>
+              <div key={index} className={slideStyles.card}>
+                {point.icon && React.cloneElement(point.icon, { className: slideStyles.cardIcon })}
+                <span className={slideStyles.cardText}>{point.text || point}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
         <div className={slideStyles.footer}>
           <span className={slideStyles.navigationText}>
