@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nexuscore-presentation/static/css/main.03877db8.css",
+    "main.js": "/nexuscore-presentation/static/js/main.fd07304f.js",
+    "static/js/453.a13f0042.chunk.js": "/nexuscore-presentation/static/js/453.a13f0042.chunk.js",
+    "index.html": "/nexuscore-presentation/index.html",
+    "main.03877db8.css.map": "/nexuscore-presentation/static/css/main.03877db8.css.map",
+    "main.fd07304f.js.map": "/nexuscore-presentation/static/js/main.fd07304f.js.map",
+    "453.a13f0042.chunk.js.map": "/nexuscore-presentation/static/js/453.a13f0042.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03877db8.css",
+    "static/js/main.fd07304f.js"
+  ]
+}
