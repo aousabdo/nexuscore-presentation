@@ -6,6 +6,7 @@ import { CuttingEdgeCapabilities } from './slides/CuttingEdgeCapabilities';
 import { RobustArchitecture } from './slides/RobustArchitecture';
 import { MeasurableImpact } from './slides/MeasurableImpact';
 import { IroncladSecurity } from './slides/IroncladSecurity';
+import { HashRouter as Router } from 'react-router-dom';
 
 const slides = [
   IntroducingNexusCore,
