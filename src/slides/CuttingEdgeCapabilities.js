@@ -1,4 +1,4 @@
-import { Cpu, MessageSquare, GitMerge, FileText, TrendingUp, Tags, Globe } from 'lucide-react';
+import { Cpu, MessageSquare, GitMerge, FileText, TrendingUp, Tags, Globe, Folder } from 'lucide-react';
 
 export const CuttingEdgeCapabilities = {
   title: "Cutting-Edge Capabilities",
@@ -8,9 +8,9 @@ export const CuttingEdgeCapabilities = {
   bulletPoints: [
     { icon: <MessageSquare />, text: "Advanced natural language processing for human-like interaction" },
     { icon: <GitMerge />, text: "Multi-source information fusion and synthesis" },
+    { icon: <Folder />, text: "Create folders to organize your files and chat with multiple PDFs in one single conversation." },
+    { icon: <Tags />, text: "Answers contain references to their source in the original PDF document. No more flipping pages." },
     { icon: <FileText />, text: "Intelligent document summarization and analysis" },
-    { icon: <TrendingUp />, text: "Predictive analytics and proactive information delivery" },
-    // { icon: <Tags />, text: "Automated content tagging and categorization" },
-    // { icon: <Globe />, text: "Expansive multilingual support for global operations" }
+    { icon: <TrendingUp />, text: "Predictive analytics and proactive information delivery" }, 
   ]
 };

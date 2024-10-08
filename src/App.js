@@ -6,6 +6,9 @@ import { CuttingEdgeCapabilities } from './slides/CuttingEdgeCapabilities';
 import { RobustArchitecture } from './slides/RobustArchitecture';
 import { MeasurableImpact } from './slides/MeasurableImpact';
 import { IroncladSecurity } from './slides/IroncladSecurity';
+import { demo_1 } from './slides/demo_1';
+import { demo_3 } from './slides/demo_3';
+import { demo_4 } from './slides/demo_4';
 
 // Remove this line:
 // import { HashRouter as Router } from 'react-router-dom';
@@ -16,7 +19,10 @@ const slides = [
   CuttingEdgeCapabilities,
   RobustArchitecture,
   MeasurableImpact,
-  IroncladSecurity
+  IroncladSecurity,
+  demo_3,
+  demo_1,
+  demo_4
 ];
 
 const Presentation = () => {
@@ -53,23 +59,34 @@ const Presentation = () => {
       <div className={slideStyles.container}>
         <div className={slideStyles.header}>
           <div className={slideStyles.titleWrapper}>
-            {React.cloneElement(currentSlideData.icon, { 
-              className: `${slideStyles.icon} ${currentSlideData.icon.props.className}`
+            {currentSlideData.icon && React.cloneElement(currentSlideData.icon, { 
+              className: `${slideStyles.icon} ${currentSlideData.icon.props?.className || ''}`
             })}
             <h1 className={slideStyles.title}>{currentSlideData.title}</h1>
           </div>
-          <h2 className={slideStyles.subtitle}>{currentSlideData.subtitle}</h2>
+          {currentSlideData.subtitle && <h2 className={slideStyles.subtitle}>{currentSlideData.subtitle}</h2>}
         </div>
         <div className={slideStyles.contentWrapper}>
-          <p className={slideStyles.content}>{currentSlideData.content}</p>
-          <div className={slideStyles.cardGrid}>
-            {currentSlideData.bulletPoints.map((point, index) => (
-              <div key={index} className={slideStyles.card}>
-                {point.icon && React.cloneElement(point.icon, { className: slideStyles.cardIcon })}
-                <span className={slideStyles.cardText}>{point.text || point}</span>
-              </div>
-            ))}
-          </div>
+          {currentSlideData.content && <p className={slideStyles.content}>{currentSlideData.content}</p>}
+          {currentSlideData.bulletPoints && currentSlideData.bulletPoints.length > 0 && (
+            <div className={slideStyles.cardGrid}>
+              {currentSlideData.bulletPoints.map((point, index) => (
+                <div key={index} className={slideStyles.card}>
+                  {point.icon && React.cloneElement(point.icon, { className: slideStyles.cardIcon })}
+                  <span className={slideStyles.cardText}>{point.text || point}</span>
+                </div>
+              ))}
+            </div>
+          )}
+          {currentSlideData.image && (
+            <div className={slideStyles.imageWrapper}>
+              <img 
+                src={currentSlideData.image.src}
+                alt={currentSlideData.image.alt}
+                className={currentSlideData.image.className}
+              />
+            </div>
+          )}
         </div>
         <div className={slideStyles.footer}>
           <span className={slideStyles.navigationText}>
